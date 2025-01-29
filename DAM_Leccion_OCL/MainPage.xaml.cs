@@ -25,14 +25,24 @@ namespace DAM_Leccion_OCL
         }
 
         public void Ejecutar() {
-            PersonaModel personaModel = new PersonaModel();
-            personaModel.Nombre = "Hola hola";
-            txtNombre.Text = personaModel.Nombre;
+            PersonaModel personaModel = new PersonaModel()
+            {
+                Nombre = "Hola, aqui estoy",
+            };
+
+            BindingContext = personaModel.Nombre;
+
+            //personaModel.Nombre = "Hola hola";
+            //txtNombre.Text = personaModel.Nombre;
+            //Binding personaBinding = new Binding();
+            //personaBinding.Source = personaModel;
+            //personaBinding.Path = "Nombre";
+            //txtNombre.SetBinding(Entry.TextProperty, personaBinding);
         }
 
         private void btnAceptar_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Asistente del sistema", "Se ha guardado el registro en la bd", "Aceptar");
+            //DisplayAlert("Asistente del sistema", "Se ha guardado el registro en la bd", "Aceptar");
         }
     }
 
