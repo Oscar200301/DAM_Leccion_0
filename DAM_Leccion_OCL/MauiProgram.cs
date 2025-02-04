@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Android.Window;
+using Microsoft.Extensions.Logging;
 
 namespace DAM_Leccion_OCL
 {
@@ -14,7 +15,6 @@ namespace DAM_Leccion_OCL
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
-
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
